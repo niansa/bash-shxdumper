@@ -436,7 +436,6 @@ main (argc, argv, env)
   default_buffered_input = -1;
 #endif
 
-  
   /* Fix for the `infinite process creation' bug when running shell scripts
      from startup files on System V. */
   login_shell = make_login_shell = 0;
