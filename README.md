@@ -7,6 +7,7 @@ This is a modified version of the bash shell that allows you to decrypt sh.x (sh
 
 ## Compilation
 `./configure`
+
 `make -j$(nproc) || make`
 
 ## Installation
@@ -14,7 +15,9 @@ This is a modified version of the bash shell that allows you to decrypt sh.x (sh
 
 ## Uninstallation
 `sudo rm /bin/bash`
+
 `sudo mv /bin/bash.bak /bin/bash`
+
 `sudo chmod a+x /bin/bash`
 
 ## Sidenote
