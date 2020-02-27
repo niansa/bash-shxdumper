@@ -1,4 +1,4 @@
-# sh.x decryptor bash, version 1.0
+# sh.x dumper for bash, version 1.0
 
 This is a modified version of the bash shell that allows you to decrypt sh.x (shc compiled) scripts. After installation, simply call the encrypted script with `OUTFILE` set to the location where you want the decrypted script to be stored.
 
