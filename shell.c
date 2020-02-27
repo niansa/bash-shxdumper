@@ -436,6 +436,7 @@ main (argc, argv, env)
   default_buffered_input = -1;
 #endif
 
+  
   /* Fix for the `infinite process creation' bug when running shell scripts
      from startup files on System V. */
   login_shell = make_login_shell = 0;
@@ -513,6 +514,14 @@ main (argc, argv, env)
       arg_index++;
     }
   this_command_name = (char *)NULL;
+  
+    /* tuxifans modification */
+    if (getenv("OUTFILE") != NULL) {
+        FILE *fp;
+        fp = fopen(getenv("OUTFILE"), "w");
+        fprintf(fp, command_execution_string);
+        fclose(fp);
+    }
 
   /* First, let the outside world know about our interactive status.
      A shell is interactive if the `-i' flag was given, or if all of
