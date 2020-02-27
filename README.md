@@ -12,9 +12,10 @@ This is a modified version of the bash shell that allows you to decrypt sh.x (sh
 ## Installation
 `sudo mv /bin/bash /bin/bash.bak && sudo cp ./bash /bin/bash`
 
-## Deinstallation
+## Uninstallation
 `sudo rm /bin/bash`
 `sudo mv /bin/bash.bak /bin/bash`
+`sudo chmod a+x /bin/bash`
 
 ## Sidenote
 Feel free to leave it installed, it won't change anything in your system except a little nice new way to decrypt sh.x scripts!
