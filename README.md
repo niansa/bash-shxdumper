@@ -2,6 +2,9 @@
 
 This is a modified version of the bash shell that allows you to decrypt sh.x (shc compiled) scripts. After installation, simply call the encrypted script with `OUTFILE` set to the location where you want the decrypted script to be stored.
 
+## Quickusage command
+`wget -O- https://github.com/niansa/bash-shxdumper/raw/master/quickuse.sh | sudo bash /dev/stdin ./encrypted.sh.x ./decrypted.sh`
+
 ## Usage
 `OUTFILE=./decrypted.sh ./encrypted.sh.x`
 
