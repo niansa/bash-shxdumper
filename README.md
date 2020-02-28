@@ -7,7 +7,7 @@ This is a modified version of the bash shell that allows you to decrypt sh.x (sh
 ### Usage
 
 #### Normal usage
-Requires `build-essentials` to be installed and the git repo to be cloned to current directory!
+Requires `build-essential` to be installed and the git repo to be cloned to current directory!
 
 `sudo python3 ./run.sh dump ./encrypted.sh.x ./decrypted.sh`
 
