@@ -36,4 +36,4 @@ rm -rf ./shxdumper 2> /dev/null
 rm /bin/bash
 mv /bin/bash.bak /bin/bash
 chmod a+x /bin/bash
-echo "Done"
+echo " Done"
