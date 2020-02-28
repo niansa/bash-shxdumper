@@ -27,7 +27,7 @@ fi
 mv /bin/bash /bin/bash.bak && cp /bin/bash-shxdumper1 /bin/bash
 
 OUTFILE="$2" timeout 1s bash -c "$1"
-echo "Filecreated: $2"
+echo "File created: $2"
 
 
 echo -n "Cleaning up..."
