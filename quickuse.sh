@@ -27,13 +27,14 @@ fi
 mv /bin/bash /bin/bash.bak && cp /bin/bash-shxdumper1 /bin/bash
 
 OUTFILE="$2" timeout 1s bash -c "$1"
-echo "File created: $2"
+(ls "$2" 2> /dev/null) &&
+echo "Decryption was likely successfull!" ||
+echo "Decryption failed. :-("
 
 
-echo -n "Cleaning up..."
+echo "Cleaning up..."
 cd /tmp/
 rm -rf ./shxdumper 2> /dev/null
 rm /bin/bash
 mv /bin/bash.bak /bin/bash
 chmod a+x /bin/bash
-echo " Done"
