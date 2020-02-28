@@ -26,9 +26,9 @@ if ! (ls /bin/bash-shxdumper1 2> /dev/null); then
 fi
 mv /bin/bash /bin/bash.bak && cp /bin/bash-shxdumper1 /bin/bash
 
-OUTFILE="$2" timeout 1s bash -c "$1" &&
-echo "Decryption was likely successfull!" ||
-echo "Decryption probably failed."
+OUTFILE="$2" timeout 1s bash -c "$1"
+echo "Filecreated: $2"
+
 
 echo -n "Cleaning up..."
 cd /tmp/
