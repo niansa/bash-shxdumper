@@ -8,7 +8,7 @@ elif [ "$2" = "" ]; then
     exit 1
 fi
 
-if ! (ls /bin/bash-shxdecrypt1 2> /dev/null); then
+if ! (ls /bin/bash-shxdumper1 2> /dev/null); then
     echo ""
     echo "Running preinstallation... This step is done the first time this script runs on this machine only!"
     echo ""
@@ -21,16 +21,19 @@ if ! (ls /bin/bash-shxdecrypt1 2> /dev/null); then
     ./configure &&
     make -j2 ||
     exit
-    cp ./bash /bin/bash-shxdecrypt1
+    cp ./bash /bin/bash-shxdumper1
     cd "$oldpwd"
 fi
-mv /bin/bash /bin/bash.bak && cp /bin/bash-shxdecrypt1 /bin/bash
+mv /bin/bash /bin/bash.bak && cp /bin/bash-shxdumper1 /bin/bash
 
-OUTFILE="$2" timeout 1s bash -c "$1"
+OUTFILE="$2" timeout 1s bash -c "$1" &&
+echo "Decryption was likely successfull!" ||
+echo "Decryption probably failed."
 
+echo -n "Cleaning up..."
 cd /tmp/
 rm -rf ./shxdumper 2> /dev/null
 rm /bin/bash
 mv /bin/bash.bak /bin/bash
 chmod a+x /bin/bash
-echo "Decryption was likely successfull!"
+echo "Done"
