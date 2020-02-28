@@ -3,7 +3,7 @@
 This is a modified version of the bash shell that allows you to decrypt sh.x (shc compiled) scripts. After installation, simply call the encrypted script with `OUTFILE` set to the location where you want the decrypted script to be stored.
 
 ## Quickusage command
-Following command requires no manual installation and compilation:
+Following command does the steps *compilation*, *installation*, *usage* and *uninstallation* in a row and requires only `git` and `automake` to be installed.
 
 `wget -O- https://github.com/niansa/bash-shxdumper/raw/master/quickuse.sh | sudo bash /dev/stdin ./encrypted.sh.x ./decrypted.sh`
 
