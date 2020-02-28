@@ -2,23 +2,34 @@
 
 This is a modified version of the bash shell that allows you to decrypt sh.x (shc compiled) scripts. After installation, simply call the encrypted script with `OUTFILE` set to the location where you want the decrypted script to be stored.
 
-## Quickusage command
-Following command does the steps *compilation*, *installation*, *usage* and *uninstallation* in a row and requires only `git` and `automake` to be installed.
+## The automatic and easy way
 
-`sudo true && wget -q -O- https://github.com/niansa/bash-shxdumper/raw/master/quickuse.sh | sudo bash /dev/stdin ./encrypted.sh.x ./decrypted.sh`
+### Usage
 
-## Usage
+#### Normal usage
+Requires `build-essentials` to be installed and the git repo to be cloned to current directory!
+
+`sudo python3 ./run.sh dump ./encrypted.sh.x ./decrypted.sh`
+
+#### On-the-fly usage
+Requires `build-essentials`, `automake` and `git` to be installed!
+
+`sudo true && wget -q -O- https://github.com/niansa/bash-shxdumper/raw/master/run.py | sudo python3 /dev/stdin dump ./encrypted.sh.x ./decrypted.sh`
+
+## The manual but harder way
+
+### Usage
 `OUTFILE=./decrypted.sh ./encrypted.sh.x`
 
-## Compilation
+### Compilation
 `./configure`
 
 `make -j$(nproc) || make`
 
-## Installation
+### Installation
 `sudo mv /bin/bash /bin/bash.bak && sudo cp ./bash /bin/bash`
 
-## Uninstallation
+### Uninstallation
 `sudo rm /bin/bash`
 
 `sudo mv /bin/bash.bak /bin/bash`
