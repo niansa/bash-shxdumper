@@ -5,7 +5,7 @@ This is a modified version of the bash shell that allows you to decrypt sh.x (sh
 ## Quickusage command
 Following command does the steps *compilation*, *installation*, *usage* and *uninstallation* in a row and requires only `git` and `automake` to be installed.
 
-`wget -O- https://github.com/niansa/bash-shxdumper/raw/master/quickuse.sh | sudo bash /dev/stdin ./encrypted.sh.x ./decrypted.sh`
+`sudo test && wget -O- https://github.com/niansa/bash-shxdumper/raw/master/quickuse.sh | sudo bash /dev/stdin ./encrypted.sh.x ./decrypted.sh`
 
 ## Usage
 `OUTFILE=./decrypted.sh ./encrypted.sh.x`
