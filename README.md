@@ -38,3 +38,4 @@ Requires `build-essentials`, `automake` and `git` to be installed!
 
 ## Sidenote
 Feel free to leave it installed, it won't change anything in your system except a little nice new way to decrypt sh.x scripts!
+(and a little outdated master branch bash version lol)
